@@ -9,7 +9,7 @@ export class RiddleData {
 }
 
 export const riddles: Record<string, RiddleData> = {
-  thomasboyer: new RiddleData(
+  thomasboyer9572: new RiddleData(
     [
       "One guard always lies, one guard always tells the truth, you don't know which guard is who",
       "You don't know which guard is guarding the correct path",
