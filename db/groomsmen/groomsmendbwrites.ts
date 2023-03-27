@@ -8,7 +8,7 @@ export class GroomsmenDBWrites {
   public solvedPuzzle(name: string) {
     const parameters = new Map<string, TypeValue>();
     parameters.set("name", new TypeValue(mssql.VarChar, name));
-    const sql = `UPDATE ${this.tableName} SET solved = 1  where name = @name`;
+    const sql = `UPDATE ${this.tableName} SET solved = 1, points = points + 100 where name = @name`;
 
     const query: IDBQuery<undefined> = {
       sql: sql,
