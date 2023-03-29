@@ -5,10 +5,11 @@ import mssql from "mssql";
 export class GroomsmenDBWrites {
   private tableName: string = "Groomsmen";
 
-  public solvedPuzzle(name: string) {
+  public addPoints(name: string, pointsToAdd: number) {
     const parameters = new Map<string, TypeValue>();
     parameters.set("name", new TypeValue(mssql.VarChar, name));
-    const sql = `UPDATE ${this.tableName} SET solved = 1, points = points + 100 where name = @name`;
+    parameters.set("pointsToAdd", new TypeValue(mssql.Int, pointsToAdd));
+    const sql = `UPDATE ${this.tableName} SET points = points + @pointsToAdd where name = @name`;
 
     const query: IDBQuery<undefined> = {
       sql: sql,

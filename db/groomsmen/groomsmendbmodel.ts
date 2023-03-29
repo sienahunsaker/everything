@@ -5,24 +5,12 @@ export class GroomsmenDBModel {
   private dbReads: GroomsmenDBReads = new GroomsmenDBReads();
   private dbWrites: GroomsmenDBWrites = new GroomsmenDBWrites();
 
-  public async solvedPuzzle(name: string) {
+  public async addPoints(name: string, pointsToAdd: number) {
     try {
-      await this.dbWrites.solvedPuzzle(name);
+      await this.dbWrites.addPoints(name, pointsToAdd);
       return true;
     } catch (err) {
       console.error(err);
-      return false;
-    }
-  }
-
-  public async getSolved(name: string) {
-    try {
-      const isSolved = await this.dbReads.isSolved(name);
-      if (isSolved) {
-        return true;
-      }
-      return false;
-    } catch (err) {
       return false;
     }
   }

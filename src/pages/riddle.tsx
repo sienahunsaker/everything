@@ -7,7 +7,8 @@ import { ChangeEvent, useState } from "react";
 import { GroomsmenAPIResponse } from "./api/groomsmen";
 
 type PuzzleAnswer = {
-  passkey: string | null;
+  name: string | null;
+  riddleKey: string | null;
   data: any;
 };
 export default function Riddle() {
@@ -16,10 +17,13 @@ export default function Riddle() {
   const [data, setData] = useState<any | undefined>(undefined);
   const [isSending, setIsSending] = useState(false);
   const [wrongAnswer, setWrongAnswer] = useState(false);
+  const [alreadySolvedMessage, setAlreadySolvedMessage] = useState(false);
   const [serverProblem, setServerProblem] = useState(false);
-  const passPhrase = searchParams.get("passphrase");
-  if (passPhrase) {
-    riddle = riddles[passPhrase];
+  const [tooManyAttempts, setTooManyAttempts] = useState(false);
+  const account = searchParams.get("account");
+  const riddleKey = searchParams.get("riddlekey");
+  if (riddleKey) {
+    riddle = riddles[riddleKey];
   }
 
   async function submitPuzzleInput(puzzleAnswer: PuzzleAnswer) {
@@ -41,15 +45,23 @@ export default function Riddle() {
     setIsSending(false);
     setServerProblem(false);
     setWrongAnswer(false);
+    setTooManyAttempts(false);
     if (!responseData.success) {
       setServerProblem(true);
       return false;
     }
-    if (responseData.response == true) {
+    if (responseData.response === true) {
       return true;
+    } else if (responseData.response === "ALREADYSOLVED") {
+      setAlreadySolvedMessage(true);
+    } else {
+      if (responseData.toManyFailedAttempts) {
+        setTooManyAttempts(true);
+      } else {
+        setWrongAnswer(true);
+      }
     }
 
-    setWrongAnswer(true);
     return false;
   }
 
@@ -110,7 +122,13 @@ export default function Riddle() {
 
         <button
           disabled={isSending}
-          onClick={() => submitPuzzleInput({ passkey: passPhrase, data: data })}
+          onClick={() =>
+            submitPuzzleInput({
+              name: account,
+              riddleKey: riddleKey,
+              data: data,
+            })
+          }
         >
           {isSending ? "Submitting..." : "Submit"}
         </button>
@@ -123,7 +141,21 @@ export default function Riddle() {
             you're out champ. Keep your head up, dig deep.
           </div>
         )}
+        {tooManyAttempts && (
+          <div>
+            You have tried to submit too many times, wow. You thought you could
+            evade this? Maybe thought you could refresh and try again? Shameful.
+            Ask another groomsmen that has solved their puzzle to grant you
+            another try. If they say no, too bad. It's a free country.
+          </div>
+        )}
       </main>
+      {alreadySolvedMessage && (
+        <div>
+          Already solved this puzzle. Not giving any more points, actually might
+          take away points. Keep it up I swear to god.
+        </div>
+      )}
     </>
   );
 }
