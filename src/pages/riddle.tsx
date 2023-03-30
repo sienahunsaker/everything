@@ -76,8 +76,9 @@ export default function Riddle() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>{riddle?.name},</div>
-        <div>{riddle?.p1}</div>
+        <h1 className={styles.riddleNumber}>{riddleKey}</h1>
+        <div className={styles.name}>{riddle?.name},</div>
+        <div className={styles.p1}>{riddle?.p1}</div>
         <div className={styles.p2}>
           However, this is a highly sought after draft, to prove yourself worthy
           of the draft (and all the riches if you participate) we have created a
@@ -87,8 +88,8 @@ export default function Riddle() {
           Godspeed.
         </div>
 
-        <div>
-          <label>RULES</label>
+        <div className={styles.rules}>
+          <label className={styles.label}>RULES</label>
           <ul>
             {riddle?.rules.map((rule) => (
               <li key={rule}>{rule}</li>
@@ -96,18 +97,18 @@ export default function Riddle() {
           </ul>
         </div>
         {riddle?.imagePath && (
-          <div>
+          <div className={styles.image}>
             <Image
               src={riddle.imagePath}
               alt="Riddle Image"
-              width={500}
-              height={500}
+              fill={true}
+              style={{ objectFit: "contain" }}
             ></Image>
           </div>
         )}
 
         {riddle?.name == "Thomas Boyer" && (
-          <div>
+          <div className={styles.answer}>
             <label>
               Since this riddle answer is a phrase, call Danny when you think
               you have the answer.
@@ -118,46 +119,50 @@ export default function Riddle() {
               }}
               placeholder="Password from Danny"
               type="text"
+              className={styles.input}
             ></input>
           </div>
         )}
-
-        <button
-          disabled={isSending}
-          onClick={() =>
-            submitPuzzleInput({
-              name: account,
-              riddleKey: riddleKey,
-              data: data,
-            })
-          }
-        >
-          {isSending ? "Submitting..." : "Submit"}
-        </button>
-        {serverProblem && (
-          <div>Server problem, uh oh, call Danny 281-870-3316</div>
-        )}
-        {wrongAnswer && (
-          <div>
-            That is simply not the right answer... one more wrong answer and
-            you're out champ. Keep your head up, dig deep.
-          </div>
-        )}
-        {tooManyAttempts && (
-          <div>
-            You have tried to submit too many times, wow. You thought you could
-            evade this? Maybe thought you could refresh and try again? Shameful.
-            Ask another groomsmen that has solved their puzzle to grant you
-            another try. If they say no, too bad. It's a free country.
-          </div>
-        )}
-      </main>
-      {alreadySolvedMessage && (
-        <div>
-          Already solved this puzzle. Not giving any more points, actually might
-          take away points. Keep it up I swear to god.
+        <div className={styles.button}>
+          {serverProblem && (
+            <div>Server problem, uh oh, call Danny 281-870-3316</div>
+          )}
+          {wrongAnswer && (
+            <div>
+              That is simply not the right answer... one more wrong answer and
+              you're out champ. Keep your head up, dig deep.
+            </div>
+          )}
+          {tooManyAttempts && (
+            <div>
+              You have tried to submit too many times, wow. You thought you
+              could evade this? Maybe thought you could refresh and try again?
+              Shameful. Ask another groomsmen that has solved their puzzle to
+              grant you another try. If they say no, too bad. It's a free
+              country.
+            </div>
+          )}
+          {alreadySolvedMessage && (
+            <div>
+              Already solved this puzzle. Not giving any more points, actually
+              might take away points. Keep it up I swear to god.
+            </div>
+          )}
+          <button
+            disabled={isSending}
+            onClick={() =>
+              submitPuzzleInput({
+                name: account,
+                riddleKey: riddleKey,
+                data: data,
+              })
+            }
+            className={styles.submit}
+          >
+            {isSending ? "SUBMITTING..." : "SUBMIT"}
+          </button>
         </div>
-      )}
+      </main>
     </>
   );
 }
