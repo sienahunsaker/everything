@@ -87,6 +87,7 @@ export default function Riddle() {
           August 11th and your spot in the draft will be secured. Good luck.
           Godspeed.
         </div>
+        <div className={styles.p2}>{riddle?.question}</div>
 
         <div className={styles.rules}>
           <label className={styles.label}>RULES</label>
@@ -107,18 +108,55 @@ export default function Riddle() {
           </div>
         )}
 
-        {riddle?.name == "Thomas Boyer" && (
+        <div>{riddle?.example}</div>
+
+        <div className={styles.answerInstructions}>
+          <label>{riddle?.answerInstructions}</label>
+        </div>
+        {riddleKey == "riddle1482" && (
           <div className={styles.answer}>
-            <label>
-              Since this riddle answer is a phrase, call Danny when you think
-              you have the answer.
-            </label>
             <input
               onChange={(event) => {
                 setData(event.target.value);
               }}
               placeholder="Password from Danny"
               type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle2919" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="1,3: 1: 3,4"
+              type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle2611" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="Password from Audra"
+              type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle9299" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="100"
+              type="number"
               className={styles.input}
             ></input>
           </div>
