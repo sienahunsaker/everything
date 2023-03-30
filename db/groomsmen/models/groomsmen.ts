@@ -1,8 +1,7 @@
 export class Groomsmen {
   constructor(
     public name: string,
-    public solved: boolean,
-    public solvedTime: Date,
-    public points: number
+    public points: number,
+    public fullname: string
   ) {}
 }

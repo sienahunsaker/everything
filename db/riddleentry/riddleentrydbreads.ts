@@ -22,4 +22,15 @@ export class RiddleEntryDBReads {
     };
     return ConnectionManager.getInstance().execute(query);
   }
+
+  public getAllRiddleEntries() {
+    const sql = `SELECT * from ${this.tableName}`;
+    const parameters = new Map<string, TypeValue>();
+    const query: IDBQuery<RiddleEntry> = {
+      sql: sql,
+      receivesData: true,
+      parameters: parameters,
+    };
+    return ConnectionManager.getInstance().execute(query);
+  }
 }

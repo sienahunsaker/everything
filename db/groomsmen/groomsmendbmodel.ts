@@ -14,4 +14,13 @@ export class GroomsmenDBModel {
       return false;
     }
   }
+
+  public async getAllGroomsmen() {
+    try {
+      return await this.dbReads.getAllGroomsmen();
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  }
 }

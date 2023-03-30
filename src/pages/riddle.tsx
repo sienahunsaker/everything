@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Riddle.module.css";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { RiddleData, riddles } from "../../data/riddledata";
 import { ChangeEvent, useState } from "react";
 import { GroomsmenAPIResponse } from "./api/groomsmen";
@@ -13,6 +13,7 @@ type PuzzleAnswer = {
 };
 export default function Riddle() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   let riddle: RiddleData | undefined = undefined;
   const [data, setData] = useState<any | undefined>(undefined);
   const [isSending, setIsSending] = useState(false);
@@ -51,6 +52,7 @@ export default function Riddle() {
       return false;
     }
     if (responseData.response === true) {
+      router.push(`/?account=${account}`);
       return true;
     } else if (responseData.response === "ALREADYSOLVED") {
       setAlreadySolvedMessage(true);

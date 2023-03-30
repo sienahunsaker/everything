@@ -6,6 +6,13 @@ export class RiddleEntryDBModel {
   private dbReads: RiddleEntryDBReads = new RiddleEntryDBReads();
   private dbWrites: RiddleEntryDBWrites = new RiddleEntryDBWrites();
 
+  public async getAllRiddleEntries() {
+    try {
+      return await this.dbReads.getAllRiddleEntries();
+    } catch (e) {
+      return false;
+    }
+  }
   public async getRetries(groomsmenName: string, riddleKey: string) {
     try {
       const riddleEntry = await this.dbReads.getRiddleEntry(
