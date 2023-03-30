@@ -78,7 +78,7 @@ export default function Riddle() {
       <main className={styles.main}>
         <div>{riddle?.name},</div>
         <div>{riddle?.p1}</div>
-        <div>
+        <div className={styles.p2}>
           However, this is a highly sought after draft, to prove yourself worthy
           of the draft (and all the riches if you participate) we have created a
           riddle for you to solve. Only {riddle?.name} would be able to solve
