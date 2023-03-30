@@ -82,10 +82,11 @@ export default function Riddle() {
         <div className={styles.p2}>
           However, this is a highly sought after draft, to prove yourself worthy
           of the draft (and all the riches if you participate) we have created a
-          riddle for you to solve. Only {riddle?.name} would be able to solve
-          this riddle (because of your superior intellect). Solve this before
-          August 11th and your spot in the draft will be secured. Good luck.
-          Godspeed.
+          riddle for you to solve. Only{" "}
+          <span className={styles.embeddedName}>{riddle?.name}</span> would be
+          able to solve this riddle (because of your superior intellect). Solve
+          this before August 11th and your spot in the draft will be secured.
+          Good luck. Godspeed.
         </div>
         <div className={styles.p2}>{riddle?.question}</div>
 
