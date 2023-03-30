@@ -90,7 +90,7 @@ export default function Riddle() {
 
         <div className={styles.rules}>
           <label className={styles.label}>RULES</label>
-          <ul>
+          <ul className={styles.li}>
             {riddle?.rules.map((rule) => (
               <li key={rule}>{rule}</li>
             ))}
@@ -125,16 +125,18 @@ export default function Riddle() {
         )}
         <div className={styles.button}>
           {serverProblem && (
-            <div>Server problem, uh oh, call Danny 281-870-3316</div>
+            <div className={styles.incorrect}>
+              Server problem, uh oh, call Danny 281-870-3316
+            </div>
           )}
           {wrongAnswer && (
-            <div>
+            <div className={styles.incorrect}>
               That is simply not the right answer... one more wrong answer and
               you're out champ. Keep your head up, dig deep.
             </div>
           )}
           {tooManyAttempts && (
-            <div>
+            <div className={styles.incorrect}>
               You have tried to submit too many times, wow. You thought you
               could evade this? Maybe thought you could refresh and try again?
               Shameful. Ask another groomsmen that has solved their puzzle to
@@ -143,7 +145,7 @@ export default function Riddle() {
             </div>
           )}
           {alreadySolvedMessage && (
-            <div>
+            <div className={styles.incorrect}>
               Already solved this puzzle. Not giving any more points, actually
               might take away points. Keep it up I swear to god.
             </div>
