@@ -171,7 +171,7 @@ export default function Riddle() {
           {wrongAnswer && (
             <div className={styles.incorrect}>
               That is simply not the right answer... one more wrong answer and
-              you're out champ. Keep your head up, dig deep.
+              you&apos;re out champ. Keep your head up, dig deep.
             </div>
           )}
           {tooManyAttempts && (
@@ -179,7 +179,7 @@ export default function Riddle() {
               You have tried to submit too many times, wow. You thought you
               could evade this? Maybe thought you could refresh and try again?
               Shameful. Ask another groomsmen that has solved their puzzle to
-              grant you another try. If they say no, too bad. It's a free
+              grant you another try. If they say no, too bad. It&apos;s a free
               country.
             </div>
           )}
