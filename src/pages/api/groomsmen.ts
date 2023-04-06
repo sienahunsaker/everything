@@ -13,24 +13,22 @@ export default async function handler(
 ) {
   const groomsmenDBModel = new GroomsmenDBModel();
   const riddleEntryDBModel = new RiddleEntryDBModel();
-  if (req.method == "GET") {
-    const name = req.body.name;
-    const riddleKey = req.body.riddleKey;
-    const isSolved = await riddleEntryDBModel.didCompletePuzzle(
-      name,
-      riddleKey
-    );
-    return res.status(200).json({
-      success: true,
-      response: isSolved,
-      toManyFailedAttempts: false,
-    });
-  }
-
   if (req.method == "POST") {
     const groomsmenName = req.body.name;
     const riddleKey = req.body.riddleKey;
     const data = req.body.data;
+    const checkHasSolved = req.body.checkHasSolved;
+    if (checkHasSolved === true) {
+      const isSolved = await riddleEntryDBModel.didCompletePuzzle(
+        groomsmenName,
+        riddleKey
+      );
+      return res.status(200).json({
+        success: true,
+        response: isSolved,
+        toManyFailedAttempts: false,
+      });
+    }
     if (riddleKey == "riddle1482") {
       const retries = await riddleEntryDBModel.getRetries(
         groomsmenName,

@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 90%;
+  max-width: 440px;
+  border: 1px solid #a67d4b;
+  border-radius: 8px;
+  margin: 8px;
+  font-family: "Exo 2", sans-serif;
+  color: whitesmoke;
+}
+.retryButton {
+  background-color: #a67d4b;
+  border: 1px solid #a67d4b;
+  border-radius: 3px;
+  color: whitesmoke;
+  padding: 5px;
+  font-family: "Exo 2", sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+.nameAndPoints {
+  margin-bottom: 16px;
+  font-family: "Orbitron", sans-serif;
+  color: #a67d4b;
+}
+.startEnd {
+  display: flex;
+  justify-content: space-between;
+}
+.imageProfile {
+  border-radius: 8px;
+  margin: auto;
+}
+.image {
+  position: relative;
+  height: 320px;
+  width: 320px;
+  margin-bottom: 16px;
+}
+.iconImage {
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+.information {
+  display: flex;
+  justify-content: space-between;
+  height: 116px;
+}
+.riddles {
+  overflow: auto;
+  width: 100%;
+}
+.riddleData {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.attributeData {
+  width: 102px;
+}

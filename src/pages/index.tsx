@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 import { RiddleAPIResponse } from "./api/leaderboard/[...groomsmen]";
 import { RiddleEntry } from "../../db/riddleentry/models/riddleentry";
 import { Groomsmen } from "../../db/groomsmen/models/groomsmen";
+import GroomsmenProfile from "../../components/groomsmenprofile";
+import { groomsmenAttributes } from "../../data/groomsmenattributes";
 
-const inter = Inter({ subsets: ["latin"] });
-
-type GroomsmenAndRiddles = {
+export type GroomsmenAndRiddles = {
   groomsmen: Groomsmen;
   riddles: RiddleEntry[];
 };
@@ -70,31 +70,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>
-          <h1>Groomsmen standings</h1>
-          <div>
+        <div className={styles.instructions}>
+          <h1 className={styles.title}>Groomsmen standings</h1>
+          <div className={styles.p}>
             All groomsmen puzzles must be solved in order to solve the grand
             riddle! The top groomsmen will receive an extra prize. Ties are
             decided by when you solve your first puzzle. After you solve your
             riddle, you can solve other riddles for extra points.
           </div>
         </div>
-        <div>
-          {groomsmenAndRiddles.map((gAndRiddles) => (
-            <div key={gAndRiddles.groomsmen.name}>
-              <div>{gAndRiddles.groomsmen.fullname}</div>
-              <div>{gAndRiddles.groomsmen.points}</div>
-              <div>
-                {gAndRiddles.riddles.map((riddle) => (
-                  <div key={riddle.riddleKey}>
-                    <label>{riddle.riddleKey}</label>
-                    <label>{riddle.solved}</label>
-                    <label>{riddle.tries}</label>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className={styles.profiles}>
+          {groomsmenAndRiddles
+            .sort((a, b) => b.groomsmen.points - a.groomsmen.points)
+            .map((gAndRiddles) => (
+              <GroomsmenProfile
+                imagePath="/profileS/thomas.png"
+                groomsmenAndRiddles={gAndRiddles}
+                groomsmenAttributes={groomsmenAttributes["thomasboyer8172"]}
+              ></GroomsmenProfile>
+            ))}
         </div>
         {account == null && (
           <div>You must scan your qr code to login properly</div>

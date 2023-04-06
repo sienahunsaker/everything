@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Riddle.module.css";
 import { useRouter, useSearchParams } from "next/navigation";
 import { RiddleData, riddles } from "../../data/riddledata";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { GroomsmenAPIResponse } from "./api/groomsmen";
 
 type PuzzleAnswer = {
@@ -67,6 +67,34 @@ export default function Riddle() {
     return false;
   }
 
+  useEffect(() => {
+    hasSolvedPuzzle();
+    console.log("has Solved");
+  }, [riddleKey, account]);
+  async function hasSolvedPuzzle() {
+    const endpoint = "/api/groomsmen";
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        riddleKey: riddleKey,
+        name: account,
+        checkHasSolved: true,
+      }),
+    };
+    console.log("Fetcing response");
+    const response = await fetch(endpoint, options);
+    const responseData: GroomsmenAPIResponse = await response.json();
+    if (responseData.success) {
+      if (responseData.response == true) {
+        router.push(`/?account=${account}`);
+      }
+    }
+  }
   return (
     <>
       <Head>
