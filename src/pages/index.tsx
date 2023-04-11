@@ -81,12 +81,12 @@ export default function Home() {
           <div className={styles.p}>
             The attributes of each competitor was decided by a group of judges.
             It is based on a 1-10 scale with 1 being the lowest of the groomsmen
-            and 10 being the best. This doesn't mean you're bad if you received
-            a 1, just that you're relatively the worst.
+            and 10 being the best. This doesn&apos;t mean you&apos;re bad if you
+            received a 1, just that you&apos;re relatively the worst.
           </div>
           <div className={styles.p}>
             You can also grant your fellow groomsmen retries if they have failed
-            too many times. But it's not required.
+            too many times. But it&apos;s not required.
           </div>
         </div>
         <div className={styles.profiles}>
@@ -94,6 +94,7 @@ export default function Home() {
             .sort((a, b) => b.groomsmen.points - a.groomsmen.points)
             .map((gAndRiddles) => (
               <GroomsmenProfile
+                key={gAndRiddles.groomsmen.fullname}
                 groomsmenAndRiddles={gAndRiddles}
                 groomsmenAttributes={
                   groomsmenAttributes[gAndRiddles.groomsmen.name]

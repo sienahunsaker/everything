@@ -54,7 +54,7 @@ const GroomsmenProfile = (props: GroomsmenProfileProps) => {
         </div>
         <div className={styles.riddles}>
           {props.groomsmenAndRiddles.riddles.map((riddle) => (
-            <div key={riddle.groomsmenName} className={styles.riddleData}>
+            <div key={riddle.riddleKey} className={styles.riddleData}>
               {!riddle.solved && riddle.tries > 0 && (
                 <button className={styles.retryButton}>GRANT RETRY</button>
               )}
