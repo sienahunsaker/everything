@@ -78,15 +78,26 @@ export default function Home() {
             decided by when you solve your first puzzle. After you solve your
             riddle, you can solve other riddles for extra points.
           </div>
+          <div className={styles.p}>
+            The attributes of each competitor was decided by a group of judges.
+            It is based on a 1-10 scale with 1 being the lowest of the groomsmen
+            and 10 being the best. This doesn't mean you're bad if you received
+            a 1, just that you're relatively the worst.
+          </div>
+          <div className={styles.p}>
+            You can also grant your fellow groomsmen retries if they have failed
+            too many times. But it's not required.
+          </div>
         </div>
         <div className={styles.profiles}>
           {groomsmenAndRiddles
             .sort((a, b) => b.groomsmen.points - a.groomsmen.points)
             .map((gAndRiddles) => (
               <GroomsmenProfile
-                imagePath="/profileS/thomas.png"
                 groomsmenAndRiddles={gAndRiddles}
-                groomsmenAttributes={groomsmenAttributes["thomasboyer8172"]}
+                groomsmenAttributes={
+                  groomsmenAttributes[gAndRiddles.groomsmen.name]
+                }
               ></GroomsmenProfile>
             ))}
         </div>

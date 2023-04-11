@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Attributes } from "../data/groomsmenattributes";
 import styles from "./groomsmenprofile.module.css";
 interface GroomsmenProfileProps {
-  imagePath: string;
   groomsmenAndRiddles: GroomsmenAndRiddles;
   groomsmenAttributes: Attributes;
 }
@@ -13,7 +12,7 @@ const GroomsmenProfile = (props: GroomsmenProfileProps) => {
     <div className={styles.container}>
       <div className={styles.image}>
         <Image
-          src={props.imagePath}
+          src={props.groomsmenAttributes.imagePath}
           alt="Profile picture"
           fill={true}
           style={{ objectFit: "contain" }}

@@ -42,7 +42,7 @@ export default async function handler(
         success: false,
         response: { riddleEntries: [], groomsmen: [] },
         message:
-          "You must solve your puzzle before accessing the leaderboard... :)",
+          "You must solve your riddles before accessing the leaderboard or other riddles... :)",
       });
     }
 

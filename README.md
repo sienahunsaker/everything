@@ -11,3 +11,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Test URL
 
 http://localhost:3000/riddle?account=thomasboyer9572&riddlekey=riddle1482
+
+## Production URL
+
+https://everything-blond.vercel.app/riddle?account=thomasboyer9572&riddlekey=riddle1482

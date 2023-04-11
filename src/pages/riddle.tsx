@@ -137,11 +137,11 @@ export default function Riddle() {
           </div>
         )}
 
-        <div>{riddle?.example}</div>
-
         <div className={styles.answerInstructions}>
           <label>{riddle?.answerInstructions}</label>
         </div>
+
+        <div>{riddle?.example}</div>
         {riddleKey == "riddle1482" && (
           <div className={styles.answer}>
             <input
@@ -185,6 +185,92 @@ export default function Riddle() {
                 setData(event.target.value);
               }}
               placeholder="100"
+              type="number"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+
+        {riddleKey == "riddle2621" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="100"
+              type="number"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+
+        {riddleKey == "riddle1229" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="14"
+              type="number"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle1112" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="1,2,3,4,5"
+              type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle9976" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="1,2,3"
+              type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle2123" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="1345"
+              type="number"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle2351" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="5"
+              type="number"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle0291" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="5"
               type="number"
               className={styles.input}
             ></input>

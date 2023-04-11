@@ -41,7 +41,7 @@
   padding: 1rem;
 }
 .answerInstructions {
-  text-align: center;
+  margin-bottom: 16px;
 }
 .image {
   position: relative;

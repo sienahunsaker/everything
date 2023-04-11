@@ -12,6 +12,7 @@
 .p {
   color: whitesmoke;
   font-family: "Exo 2", sans-serif;
+  margin-bottom: 16px;
 }
 .instructions {
   text-align: center;
