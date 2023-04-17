@@ -35,6 +35,19 @@ export class RiddleEntryDBWrites {
     };
     return ConnectionManager.getInstance().execute(query);
   }
+  public decreaseTries(id: number) {
+    const parameters = new Map<string, TypeValue>();
+    parameters.set("id", new TypeValue(mssql.Int, id));
+
+    const sql = `UPDATE ${this.tableName} SET tries = tries -1 where id=@id`;
+
+    const query: IDBQuery<undefined> = {
+      sql: sql,
+      receivesData: false,
+      parameters: parameters,
+    };
+    return ConnectionManager.getInstance().execute(query);
+  }
   public createRiddleEntry(riddleEntry: RiddleEntry) {
     const parameters = new Map<string, TypeValue>();
     parameters.set(

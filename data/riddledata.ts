@@ -35,7 +35,7 @@ export const riddles: Record<string, RiddleData> = {
     "Samuel Berry",
     "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your persistence and consistency. We once heard your car was stolen and then found later on, after retrieving the car and cleaning it up, you still left your keys in the car unlocked. Damn that takes some balls.",
     "Sam is called into work at Rochester, he takes the plane over and lands safely. But something is off. He goes into his work but when he gets there he sees 25 hungry ass zombies. Oh shit. He starts running away and runs into three of his coworkers further down the hall. Sam knows if he can get across the hall they can shut the door and lock the  zombies out. Luckily the zombies are very slow, unluckily his coworkers aren’t as fast as him. All of a sudden the hallway starts collapsing into the inferno of the earth's core below. It’s barely still standing. The hallway can only support two people at once. Even worse, the lights are out, making it pitch black, only sams thoughtful coworker thought to bring a lantern. The zombies will reach the hallway in 17 minutes. Sam can cross the hallway in 1 minute, and the other coworkers can cross the hallway as follows, 2 minutes, 5 minutes, and ten minutes. How can you cross the hallway in 17 minutes?",
-    "Enter who crosses the bridge followed by a ':' use commas for more than one person crossing. For example 1,3: 1 (this matches the example above).",
+    "Enter who crosses the bridge followed by a ':' use commas for more than one person crossing. Put the faster person first if two people crossing. For example 1,3: 1 (this matches the example below).",
     "Example: Person 1 and person 3 cross the hallway together and it takes 5 minutes, person 1 runs back with the lantern and that takes 1 minute. Equaling a total of 6 minutes so far."
   ),
   riddle2611: new RiddleData(
@@ -83,7 +83,7 @@ export const riddles: Record<string, RiddleData> = {
       "You can only do two moves",
       "A move is moving a pencil (anywhere)",
     ],
-    "Kyle Rhomer",
+    "Kyle Rohmer",
     "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB(Super Bachelor Bowl). You have been selected for your strong tree-like legs and high pain tolerance. We heard you were able to be stung by a scorpion and only winced for like 15 minutes.",
     "You have a goal post made of pencils (all of equal length). Inside the goal post is a quarter. Your goal is to make a new goal post where the quarter IS NOT in the goal post. ",
     "Enter the two numbers you moved to solve the puzzle, separated by a comma. All different combinations are accounted for. e.g 1,2 = 2,1 or 1, 3 = 2,3",
@@ -96,7 +96,7 @@ export const riddles: Record<string, RiddleData> = {
       "You have unlimited water",
     ],
     "Kyle Quinlan",
-    "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your persistence and consistency. We once heard your car was stolen and then found later on, after retrieving the car and cleaning it up, you still left your keys in the car unlocked. Damn that takes some balls.",
+    "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your kindness and loyalty. We once heard you were strapped up like a cow and pulled back and forth. For about 10 minutes. After this you still stayed friends with your wranglers. That's friendship.",
     "You have two buckets, one can hold 3 gallons of water and the other can hold 5 gallons of water. The water boy named Kyle needs exactly four gallons of water to give to his thirsty players that he bows down to. The two buckets are misshapen though, so you can’t fill it half way and be sure it’s half.",
     "Once you think you know the answer, text or call Danny and he will give you the password.",
     "",
@@ -144,7 +144,7 @@ export const riddles: Record<string, RiddleData> = {
       "Picture of ant farm below.",
     ],
     "Brody Smith",
-    "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your knowledge and quick thinking. We once heard you were able to summon the powers of the unknown god Jacobe Johnson and easily win a game of basketball ripstick gladiator. Impressive.",
+    "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your agility and reaction time. We once heard while playing volleyball you jumped up at the net to block a spike. Instead of blocking the spike however, you faked a block with your right and spiked the spike back with your left hand. It barely even makes sense to read but it happened.",
     "Brody being a loving guy, loves all kinds of animals. This is what encouraged him to buy an ant farm. He has had his ant farm for a while now though, and needs to clean up the tubes. But Brody procrastinated like a bad little bitch boy and now if he doesn’t get the ants out of the tube in five minutes, they will all die from the toxic fumes in the tube. Luckily brody also loves to suck things and has two vacuum tubes. He can place them anywhere in the ant farm to suck up an ant that walks pass. The problem is he has to suck up ALL the ants in under five minutes, so where he places the vacuums is important. ",
     "Where do you place your two tubes? Enter the sum of those tubes.",
     "Example: if you choose 1 and 2 to place your tubes, enter 3 as the answer.",
@@ -161,7 +161,7 @@ export const riddles: Record<string, RiddleData> = {
     ],
     "Jackson Boyer",
     "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your bull-like charge and incredible strength. It doesn’t matter what sport you’re playing, you always find a way to charge head first. We once heard you were playing a game of basketball and sacrificed your body to save the ball, and in the process obliterated a fence. We need that energy.",
-    "Jackson loves animals, specifically bulls. Without understanding why or how, he just feels connected to the large animals. Jack owns 15 bulls and puts each one of them in their own beautiful cages, his fear is they might hurt each other otherwise, they are very horny bulls. Can’t stress this enough, Jack feels connected to these animals. One day while Jack is out and about he hears a scream. It’s a damsel in distress! To save her he must cross all of the cages his bulls are in, it’s the only way. The cages are in a 4 by 4 pattern with the entrance at the top left and the exit at the bottom right. You must navigate through these cages to save the damsel. There is a problem though, once you enter a cage, you can’t go back as the horny bulls would be ready this time.Also, your bulls are hungry for their grub, so you must feed each one along the way. Luckily for you, the first cage does not have a bull in it. How can you visit each bull only once and still exit to save the Damsel?",
+    "Jackson loves animals, specifically bulls. Without understanding why or how, he just feels connected to the large animals. Jack owns 15 bulls and puts each one of them in their own beautiful cages, his fear is they might hurt each other otherwise, they are very horny bulls. Can’t stress this enough, Jack feels connected to these animals. One day while Jack is out and about he hears a scream. It’s a damsel in distress! To save her he must cross all of the cages his bulls are in, it’s the only way. The cages are in a 4 by 4 pattern with the entrance at the top left and the exit at the bottom right. You must navigate through these cages to save the damsel. There is a problem though, once you enter a cage, you can’t go back as the horny bulls would be ready this time. Also, your bulls are hungry for their grub, so you must feed each one along the way. Luckily for you, the first cage does not have a bull in it. How can you visit each bull only once and still exit to save the Damsel?",
     "Assume the cages are labeled 1 - 16 from top left to right. Enter the route you took separated by commas",
     "Example input: 1,2,3,4,5",
     "/riddles/jacksonboyer.png"
@@ -202,25 +202,11 @@ export const riddles: Record<string, RiddleData> = {
       "No planes can run out of fuel in mid air.",
       "Planes can only land, refuel, and take off from the starting airport.",
     ],
-    "Jamo Boyer",
+    "Jameson Boyer",
     "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your speed and positivity. We’re in desperate need of good vibes, and we recently heard a story proving that you can bring it. You were once asked to run a ball up a field while being hit by a bunch of men's sticks, even with all of these sticks in your face, you still made it and delivered the ball. Bravo.",
     "Jamo is speed, jamo loves speed. His favorite movie growing up was Lightning mcqueen. Because of this you were awarded three extremely fast planes, built by the famous engineer DANIEL BOYER. To prove you’re the best, your goal is to fly around the world without ever leaving the plane. The problem is your plane only makes it halfway before running out of gas. Luckily the two other planes you have can be put to use. Each plane is able to refuel another plane instantly, and in the air. All planes can only take off, refuel, and land at the same starting airport. With your two trusty sidekicks tommy and jack, you embark to be the first in the world to achieve this feat. It is important your sidekicks survive too, so they also must land safely at the airport. So how do you do it?",
-    "Enter the amount of times a plane lands and takes off and refuels.",
+    "Enter the amount of times a plane lands and takes off and refuels another plane (don't count refueling at the airport).",
     "Example: 2 planes take off, one refuels another, and two planes land = 5"
-  ),
-  riddle1792: new RiddleData(
-    [
-      "Each side of the gap is 50 feet tall",
-      "The rope is 80 feet long",
-      "Each end of the rope is attached to the sides of the gap",
-      "The middle of the hanging rope is 10 feet above the floor",
-    ],
-    "Ryan Quinlan",
-    "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your knowledge and quick thinking. We once heard you were able to summon the powers of the unknown god Jacobe Johnson and easily win a game of basketball ripstick gladiator. Impressive.",
-    "You’re trying to jump across an unknown gap, you know this gap is here but you can’t see it because there is A LOT of fog. If you fall you will plummet 50 feet to your death. You can’t even see an inch in front of your face. You know that if you can figure out how far the gap is you can easily adjust your jump strength to land perfectly on the other side. The other side is only one inch long so you have to be perfect. To help you out, you summon the power of jacobe johnson and he tells you two things: He’s attached an 80 foot long rope to each side of the gap and let it hang.\nThe middle of the hanging rope is ten feet above the ground",
-    "Enter how wide the gap is",
-    "",
-    "/riddles/RyanQuinlan.png"
   ),
   riddle0291: new RiddleData(
     [
@@ -236,18 +222,17 @@ export const riddles: Record<string, RiddleData> = {
     "Enter the three numbers you should write separated by commas",
     "Example: 2,2,2"
   ),
-  riddle4888: new RiddleData(
+  riddle1792: new RiddleData(
     [
-      "Each side of the gap is 50 feet tall",
-      "The rope is 80 feet long",
-      "Each end of the rope is attached to the sides of the gap",
-      "The middle of the hanging rope is 10 feet above the floor",
+      "You can guess at most 7 times.",
+      "The cloaked figure will tell you if your guess is lower,higher, or correct.",
+      "10 dollars for a correct guess.",
+      "-5 dollars for 8 or more incorrect guesses in a row.",
     ],
-    "Ryan Quinlan",
-    "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your knowledge and quick thinking. We once heard you were able to summon the powers of the unknown god Jacobe Johnson and easily win a game of basketball ripstick gladiator. Impressive.",
-    "You’re trying to jump across an unknown gap, you know this gap is here but you can’t see it because there is A LOT of fog. If you fall you will plummet 50 feet to your death. You can’t even see an inch in front of your face. You know that if you can figure out how far the gap is you can easily adjust your jump strength to land perfectly on the other side. The other side is only one inch long so you have to be perfect. To help you out, you summon the power of jacobe johnson and he tells you two things: He’s attached an 80 foot long rope to each side of the gap and let it hang.\nThe middle of the hanging rope is ten feet above the ground",
-    "Enter how wide the gap is",
-    "",
-    "/riddles/RyanQuinlan.png"
+    "Carter Binks",
+    "You have been personally selected to be included in the 2023 Bachelor Bowl Draft. This formal invitation is letting you know the draft will happen August 11th at 8am. After the draft we will begin the SBB (Super Bachelor Bowl). You have been selected for your work ethic and dicispline. We were told that when choosing a job you always decide on the job that is between the hours of 12-9 AM and involves snow. To be specific, shoveling snow off old main at 4am, and driving a CAT grooming runs. Damn.",
+    "A random guy named Carter was heavily addicted to gambling. The thrill of winning was too much to stop. A cloaked figure approached him and offered him a chance at some money. He said I am thinking of a number between 1 and 100, if you can guess my number in 7  moves or less I will give you 10 dollars. After every guess I will tell you if it’s lower or higher. If you don’t guess it after 7 moves you owe me 5 dollars. Wanna play? Carter thinks and thinks, but before he can think about a solution he says yes. Gambling really took a hold of this guy. If you played this game 13 times, how much money would you earn/lose on average?",
+    "Enter the average amount earned per game, up to two decimal points.",
+    ""
   ),
 };

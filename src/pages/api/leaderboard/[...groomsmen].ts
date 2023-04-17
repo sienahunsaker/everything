@@ -19,8 +19,9 @@ export default async function handler(
 ) {
   const groomsmenDBModel = new GroomsmenDBModel();
   const riddleEntryDBModel = new RiddleEntryDBModel();
-  const { groomsmen } = req.query;
+
   if (req.method == "GET") {
+    const { groomsmen } = req.query;
     const riddleEntries = await riddleEntryDBModel.getAllRiddleEntries();
     if (riddleEntries) {
       if (
@@ -46,6 +47,23 @@ export default async function handler(
       });
     }
 
+    return serverProblem(res);
+  }
+
+  if (req.method == "POST") {
+    const { groomsmen } = req.query;
+    const decreaseTries = await riddleEntryDBModel.decreaseTries(
+      (groomsmen as string[])[0],
+      (groomsmen as string[])[1]
+    );
+    if (decreaseTries) {
+      return res.status(200).send({
+        success: true,
+        response: { riddleEntries: [], groomsmen: [] },
+        message:
+          "Wow you're a great person you helped your buddy. I love you. God loves you.",
+      });
+    }
     return serverProblem(res);
   }
 }

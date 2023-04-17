@@ -28,9 +28,21 @@
   font-family: "Orbitron", sans-serif;
   color: #a67d4b;
 }
+.riddletitle {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: underline;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+.riddletitle a {
+  color: #a67d4b;
+}
 .startEnd {
   display: flex;
   justify-content: space-between;
+}
+.endurance {
 }
 .imageProfile {
   border-radius: 8px;
@@ -64,5 +76,5 @@
   justify-content: flex-end;
 }
 .attributeData {
-  width: 102px;
+  min-width: 102px;
 }

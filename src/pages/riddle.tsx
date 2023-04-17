@@ -28,6 +28,9 @@ export default function Riddle() {
   }
 
   async function submitPuzzleInput(puzzleAnswer: PuzzleAnswer) {
+    if (puzzleAnswer.data == undefined) {
+      return;
+    }
     const JSONdata = JSON.stringify(puzzleAnswer);
     setIsSending(true);
     const endpoint = "/api/groomsmen";
@@ -154,6 +157,42 @@ export default function Riddle() {
             ></input>
           </div>
         )}
+        {riddleKey == "riddle3912" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="Ask Danny"
+              type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle2552" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="1,2"
+              type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+        {riddleKey == "riddle0012" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="1 or 2 or 3 or 4"
+              type="number"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
         {riddleKey == "riddle2919" && (
           <div className={styles.answer}>
             <input
@@ -203,7 +242,18 @@ export default function Riddle() {
             ></input>
           </div>
         )}
-
+        {riddleKey == "riddle0102" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="12"
+              type="number"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
         {riddleKey == "riddle1229" && (
           <div className={styles.answer}>
             <input
@@ -270,7 +320,20 @@ export default function Riddle() {
               onChange={(event) => {
                 setData(event.target.value);
               }}
-              placeholder="5"
+              placeholder="2,2,2"
+              type="text"
+              className={styles.input}
+            ></input>
+          </div>
+        )}
+
+        {riddleKey == "riddle1792" && (
+          <div className={styles.answer}>
+            <input
+              onChange={(event) => {
+                setData(event.target.value);
+              }}
+              placeholder="5.12"
               type="number"
               className={styles.input}
             ></input>
@@ -284,8 +347,9 @@ export default function Riddle() {
           )}
           {wrongAnswer && (
             <div className={styles.incorrect}>
-              That is simply not the right answer... one more wrong answer and
-              you&apos;re out champ. Keep your head up, dig deep.
+              That is simply not the right answer... you only get two tries
+              total, if this was your second try you&apos;re outa luck. Else...
+              Keep your head up, dig deep.
             </div>
           )}
           {tooManyAttempts && (

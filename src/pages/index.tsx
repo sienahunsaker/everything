@@ -71,7 +71,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.instructions}>
-          <h1 className={styles.title}>Groomsmen standings</h1>
+          <h1 className={styles.title}>Groomsmen Standings</h1>
           <div className={styles.p}>
             All groomsmen puzzles must be solved in order to solve the grand
             riddle! The top groomsmen will receive an extra prize. Ties are
@@ -88,6 +88,14 @@ export default function Home() {
             You can also grant your fellow groomsmen retries if they have failed
             too many times. But it&apos;s not required.
           </div>
+          <div className={styles.p}>
+            Keep reading if you care about knowing when the wedding is and what
+            to do. We are leaving August 10th early in the morning to go to
+            Yellowstone. If you want to come you can, just let me know. August
+            11th is the bachelor bowl and we will be staying at the cabin the
+            night of the 10th, 11th, and 12th. You don&apos;t have to stay all
+            nights but you can if you want, we have room.
+          </div>
         </div>
         <div className={styles.profiles}>
           {groomsmenAndRiddles
@@ -96,6 +104,8 @@ export default function Home() {
               <GroomsmenProfile
                 key={gAndRiddles.groomsmen.fullname}
                 groomsmenAndRiddles={gAndRiddles}
+                currentAccount={account ?? ""}
+                noRetry={gAndRiddles.groomsmen.name == account}
                 groomsmenAttributes={
                   groomsmenAttributes[gAndRiddles.groomsmen.name]
                 }

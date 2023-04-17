@@ -13,6 +13,23 @@ export class RiddleEntryDBModel {
       return false;
     }
   }
+
+  public async decreaseTries(groomsmenName: string, riddleKey: string) {
+    try {
+      const riddleEntry = await this.dbReads.getRiddleEntry(
+        groomsmenName,
+        riddleKey
+      );
+
+      if (riddleEntry && riddleEntry.length == 1 && riddleEntry[0].id) {
+        await this.dbWrites.decreaseTries(riddleEntry[0].id);
+      }
+      return true;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  }
   public async getRetries(groomsmenName: string, riddleKey: string) {
     try {
       const riddleEntry = await this.dbReads.getRiddleEntry(
