@@ -138,7 +138,7 @@ const riddleAnswers: Record<string, (input: any) => boolean> = {
     removeWhiteSpace(input).toLowerCase() === "penisshapedbucket",
   riddle2621: (input) => convertToInt(input) === 108,
   riddle1229: (input) => convertToInt(input) == 9,
-  riddle0102: (input) => convertToInt(input) === 15,
+  riddle0102: (input) => convertToInt(input) === 24,
   riddle1112: (input) => {
     const answers = removeWhiteSpace(input).split(",");
     if (answers.length != 17) {
