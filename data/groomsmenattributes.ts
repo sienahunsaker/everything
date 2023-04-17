@@ -96,7 +96,7 @@ export const groomsmenAttributes: Record<string, Attributes> = {
     clutch: 2,
     endurance: 7,
     hops: 10,
-    imagePath: "/profiles/parkerquinlan.jpg",
+    imagePath: "/profiles/parkerquinlan.JPG",
   },
   ryanquinlan2222: {
     speed: 1,
