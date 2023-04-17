@@ -144,7 +144,7 @@ export default function Riddle() {
           <label>{riddle?.answerInstructions}</label>
         </div>
 
-        <div>{riddle?.example}</div>
+        <div className={styles.example}>{riddle?.example}</div>
         {riddleKey == "riddle1482" && (
           <div className={styles.answer}>
             <input
