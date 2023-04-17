@@ -75,8 +75,9 @@ export default function Home() {
           <div className={styles.p}>
             All groomsmen puzzles must be solved in order to solve the grand
             riddle! The top groomsmen will receive an extra prize. Ties are
-            decided by when you solve your first puzzle. After you solve your
-            riddle, you can solve other riddles for extra points.
+            decided by whoever solves all of the puzzles first. There are 16
+            puzzles. After you solve your riddle, you can solve other riddles
+            for extra points.
           </div>
           <div className={styles.p}>
             The attributes of each competitor was decided by a group of judges.
