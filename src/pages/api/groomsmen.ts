@@ -128,7 +128,7 @@ const riddleAnswers: Record<string, (input: any) => boolean> = {
   riddle1482: (input) =>
     removeWhiteSpace(input).toLowerCase() == "iamaweenieboy",
   riddle2919: (input) =>
-    removeWhiteSpace(input).toLowerCase() === "1,2:1:5,10:2:1,2",
+    removeWhiteSpace(input).toLowerCase() === "1,2:1:3,4:2:1,2",
   riddle2611: (input) => removeWhiteSpace(input).toLowerCase() === "ilovemymom",
   riddle9299: (input) => convertToInt(input) === 0,
   riddle0012: (input) => convertToInt(input) === 3,
