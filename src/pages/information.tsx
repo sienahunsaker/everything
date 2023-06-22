@@ -34,11 +34,13 @@ export default function Information() {
       </Head>
       <main className={styles.main}>
         <div className={styles.instructions}>
-          <h1 className={styles.title}>Siena and Danny's Weekend Wedding</h1>
+          <h1 className={styles.title}>
+            Siena and Danny&apos;s Weekend Wedding
+          </h1>
           <div className={styles.p}>
             We are so excited to have you at our wedding! This is a three day
-            event starting thursday morning and ending saturday night. It's up
-            to you to stay as long as you want, we would love to have you the
+            event starting thursday morning and ending saturday night. It&apos;s
+            up to you to stay as long as you want, we would love to have you the
             whole weekend.
           </div>
           <h2 className={styles.title}>Lodging Arrangements</h2>
@@ -113,7 +115,8 @@ export default function Information() {
                 we will be deciding where to go as a group.
               </li>
               <li>
-                It will be busy since it's summer so expect crowds and traffic.
+                It will be busy since it&apos;s summer so expect crowds and
+                traffic.
               </li>
               <li>
                 After Yellowstone we are eating at wild west pizzeria (to go)
@@ -123,7 +126,7 @@ export default function Information() {
               <li>
                 After eating everyone should either head towards one of the
                 cabins, their RV, or a hotel they booked. Or just be homeless it
-                doesn't matter.
+                doesn&apos;t matter.
               </li>
             </ol>
           </div>
