@@ -24,52 +24,46 @@ export default function Information() {
       </Head>
       <main className={styles.main}>
         <div className={styles.instructions}>
-          <h1 className={styles.title}>Groomsmen Standings</h1>
+          <h1 className={styles.title}>Siena and Danny's Wedding Weekend</h1>
           <div className={styles.p}>
-            All groomsmen puzzles must be solved in order to solve the grand
-            riddle! The top groomsmen will receive an extra prize. Ties are
-            decided by whoever solves all of the puzzles first. There are 16
-            puzzles. After you solve your riddle, you can solve other riddles
-            for extra points.
+            We are so excited to have you at our wedding! This is a three day
+            event starting thursday morning and ending saturday night. It's up
+            to you to stay as long as you want, we would love to have you the
+            whole weekend.
+          </div>
+          <div className={styles.title}>Itinerary</div>
+          <div className={styles.p}>
+            These times are what the main group will be following, if you want
+            to go your own route or skip out on some of these activities that is
+            totally ok. However we will not wait for people since there will be
+            a lot of people to wait for. If you are running late, no problem
+            just catch up.{" "}
           </div>
           <div className={styles.p}>
-            The attributes of each competitor was decided by a group of judges.
-            It is based on a 1-10 scale with 1 being the lowest of the groomsmen
-            and 10 being the best. This doesn&apos;t mean you&apos;re bad if you
-            received a 1, just that you&apos;re relatively the worst.
+            O Thursday: 1. Meet at the front of Yellowstone at 11PM (in the
+            parking lot of the IMAX theater) 2. At 11:15 am we will enter the
+            park, there is no service in the park so if you want to be with the
+            group make sure you get there at 11. 3. We will be going south
+            towards old faithful and then come back the same way and leave. 4.
+            The first place we will visit is fountain paint pots, after that we
+            will be deciding where to go as a group. 5. It will be busy since
+            it's summer so expect crowds and traffic. 6. After yellowstone we
+            are eating at wild west pizzeria (to go) and bringing the food to
+            pioneer park. If you want something else that is fine. There are
+            many places to eat. 7. After eating, everyone should either head
+            towards one of the cabins, their RV, or a hotel they booked. Or just
+            be homeless it doesn't matter.
           </div>
           <div className={styles.p}>
-            You can also grant your fellow groomsmen retries if they have failed
-            too many times. But it&apos;s not required.
+            Friday: 1. 8am bachelor bowl with the groomsmen. Spectators
+            welcomed. 2. 10am bachelorette spa and pool day 3. Free time at the
+            cabin 4. 4pm Wedding Rehearsal 5. 5pm BBQ 6. 6pm Casino night starts
           </div>
           <div className={styles.p}>
-            Keep reading if you care about knowing when the wedding is and what
-            to do. We are leaving August 10th early in the morning to go to
-            Yellowstone. If you want to come you can, just let me know. August
-            11th is the bachelor bowl and we will be staying at the cabin the
-            night of the 10th, 11th, and 12th. You don&apos;t have to stay all
-            nights but you can if you want, we have room.
+            Saturday: 1.11:30am marriage ceremony 2. 1pm wedding Luncheon 3.
+            Reception 3-8
           </div>
         </div>
-        <div className={styles.profiles}>
-          {groomsmenAndRiddles
-            .sort((a, b) => b.groomsmen.points - a.groomsmen.points)
-            .map((gAndRiddles) => (
-              <GroomsmenProfile
-                key={gAndRiddles.groomsmen.fullname}
-                groomsmenAndRiddles={gAndRiddles}
-                currentAccount={account ?? ""}
-                noRetry={gAndRiddles.groomsmen.name == account}
-                groomsmenAttributes={
-                  groomsmenAttributes[gAndRiddles.groomsmen.name]
-                }
-              ></GroomsmenProfile>
-            ))}
-        </div>
-        {account == null && (
-          <div>You must scan your qr code to login properly</div>
-        )}
-        {serverMessage && <div>Server message: {serverMessage}</div>}
       </main>
     </>
   );
