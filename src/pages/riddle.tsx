@@ -105,6 +105,15 @@ export default function Riddle() {
         <meta name="description" content="Solve this if you're strong enough" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <style>
+          {`
+            html,
+            body {
+              background-color: #0d2611;
+              color: whitesmoke;
+            }
+          `}
+        </style>
       </Head>
       <main className={styles.main}>
         <h1 className={styles.riddleNumber}>{riddleKey}</h1>

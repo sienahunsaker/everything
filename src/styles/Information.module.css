@@ -1,0 +1,38 @@
+.title {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 0.05rem;
+}
+.h3 {
+  font: bold;
+  text-align: left;
+}
+.p {
+  font-family: "Comme", sans-serif;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.footer {
+  font-family: "Comme", sans-serif;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+.ol {
+  text-align: left;
+}
+
+.ol li {
+  margin-bottom: 8px;
+}
+.link {
+  color: #f05252;
+}
+.instructions {
+  text-align: center;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 32px;
+}
