@@ -17,6 +17,15 @@ export const groomsmenAttributes: Record<string, Attributes> = {
     hops: 8,
     imagePath: "/profiles/thomas.png",
   },
+  harrymellon: {
+    speed: 10,
+    strength: 10,
+    accuracy: 10,
+    clutch: 10,
+    endurance: 1,
+    hops: 10,
+    imagePath: "/profiles/harrymellon.jpg",
+  },
   brodysmith2999: {
     speed: 9,
     strength: 3,
