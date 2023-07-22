@@ -77,6 +77,18 @@ export default function Information() {
               Link to cabin
             </Link>
           </div>
+          <h2 className={styles.title}>Registry</h2>
+          <div className={styles.p}>
+            <Link
+              className={styles.link}
+              target="_blank"
+              href={
+                "https://www.amazon.com/wedding/daniel-boyer-siena-hunsaker--august-2023/registry/HYB30GKIMJQG"
+              }
+            >
+              Link to registry
+            </Link>
+          </div>
           <h2 className={styles.title}>Itinerary</h2>
           <div className={styles.p}>
             These times are what the main group will be following, if you want
