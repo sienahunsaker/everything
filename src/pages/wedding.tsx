@@ -54,7 +54,7 @@ export default function Wedding() {
             <Link
               className={styles.link}
               target="_blank"
-              href={"https://goo.gl/maps/kUppKaRiHQxj7cA96"}
+              href={"https://goo.gl/maps/FxggWzvfFz5rETmY8"}
             >
               Link to cabin
             </Link>
