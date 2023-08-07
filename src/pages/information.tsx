@@ -1,14 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Information.module.css";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { RiddleAPIResponse } from "./api/leaderboard/[...groomsmen]";
-import { RiddleEntry } from "../../db/riddleentry/models/riddleentry";
-import { Groomsmen } from "../../db/groomsmen/models/groomsmen";
-import GroomsmenProfile from "../../components/groomsmenprofile";
-import { groomsmenAttributes } from "../../data/groomsmenattributes";
 import Link from "next/link";
 
 export default function Information() {
@@ -43,10 +34,56 @@ export default function Information() {
             up to you to stay as long as you want, we would love to have you the
             whole weekend.
           </div>
+          <h2 className={styles.title}>
+            Im about to pack, what do I pack? (not exhaustive)
+          </h2>
+          <div className={styles.p}>
+            <ol className={styles.ol}>
+              <li>Swimsuit (for swimming)</li>
+              <li>
+                Golf clubs, if you are golfing. If you are golfing and you do
+                not have clubs you will have to rent. or ask if someone has an
+                extra set. The scramble teams will be completely and utterly
+                fair.
+                <h3 className={styles.h3}>
+                  Who is golfing? Here is the list so far.
+                </h3>
+                <ol className={styles.ol}>
+                  <li>Kyle Rohmer</li>
+                  <li>Jackson Boyer</li>
+                  <li>Jamo Boyer</li>
+                  <li>Sam Berry</li>
+                  <li>Ryan Quinlan</li>
+                  <li>Thomas Boyer</li>
+                  <li>Jan Boermann</li>
+                  <li>Ty Siepert</li>
+                  <li>Jaden Hunsaker</li>
+                  <li>Sagin Hunsaker</li>
+                  <li>Lance Boyer</li>
+                  <li>Danny Boyer</li>
+                  <li>Harry Melon</li>
+                  <li>Arturo aceves</li>
+                  <li>Livy Boyer</li>
+                  <li>Jerry Boyer</li>
+                </ol>
+              </li>
+              <li>
+                If groomsmen: Black shoes, black socks, black pants, white
+                shirt, black belt. I have a tie for you.
+              </li>
+              <li>Denim pants and Denim shirt for casino night.</li>
+              <li>
+                Sports wear if you want to play sports Friday Morning, also
+                cleats.
+              </li>
+              <li>Sunscreen.</li>
+            </ol>
+          </div>
           <h2 className={styles.title}>Lodging Arrangements</h2>
           <div className={styles.p}>
-            Some people will be staying in the cabin, you know who you are. For
-            those not in the Cabin, there are 3 options for you
+            Some people will be staying in the cabin, you know who you are, if
+            you have an air mattress please bring it, with pillow and blanket
+            too. For those not in the Cabin, there are 3 options for you
             <ul className={styles.ol}>
               <li>Rent an Airbnb or VRBO near the Cabin.</li>
               <li>
@@ -146,9 +183,10 @@ export default function Information() {
             <h3 className={styles.h3}>Friday:</h3>
             <ol className={styles.ol}>
               <li>
-                8 AM bachelor bowl with the groomsmen. Spectators welcomed.
-                Currently this is TBD (it might be a golf tournament).
+                8:30 AM bachelor bowl with the groomsmen. Spectators welcomed.
+                We will be playing ultimate, baseball, and soccer.
               </li>
+              <li>1pm golf tournament</li>
               <li>10 AM bachelorette spa and pool day.</li>
               <li>Free time at the cabin.</li>
               <li>4 PM Wedding Rehearsal.</li>
@@ -162,7 +200,7 @@ export default function Information() {
           <div className={styles.p}>
             <h3 className={styles.h3}>Saturday:</h3>
             <ol className={styles.ol}>
-              <li>12 PM marriage ceremony.</li>
+              <li>11 AM marriage ceremony.</li>
               <li>2 PM wedding Luncheon.</li>
               <li>Reception 3-8 PM.</li>
             </ol>
