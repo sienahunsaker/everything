@@ -35,6 +35,10 @@ export default function Information() {
             whole weekend.
           </div>
           <h2 className={styles.title}>
+            The website is always updating so check here for information
+          </h2>
+
+          <h2 className={styles.title}>
             Im about to pack, what do I pack? (not exhaustive)
           </h2>
           <div className={styles.p}>
@@ -111,7 +115,15 @@ export default function Information() {
               target="_blank"
               href={"https://goo.gl/maps/FxggWzvfFz5rETmY8"}
             >
-              Link to cabin
+              Link to main cabin
+            </Link>
+
+            <Link
+              className={styles.link}
+              target="_blank"
+              href={"https://goo.gl/maps/1KxogVdVwyRwVRgE9"}
+            >
+              Link to bills island cabin
             </Link>
           </div>
           <h2 className={styles.title}>Registry</h2>
@@ -184,7 +196,9 @@ export default function Information() {
             <ol className={styles.ol}>
               <li>
                 8:30 AM bachelor bowl with the groomsmen. Spectators welcomed.
-                We will be playing ultimate, baseball, and soccer.
+                We will be playing ultimate, baseball, and soccer. This is at
+                pioneer park. Make sure you bring golf clothes if you are
+                golfing later as we are going straight to the course.
               </li>
               <li>1pm golf tournament</li>
               <li>10 AM bachelorette spa and pool day.</li>
