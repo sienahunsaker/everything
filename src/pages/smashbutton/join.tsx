@@ -25,7 +25,7 @@ export default function Join() {
       </Head>
       <main className={styles.main}>
         <label className={styles.label}>Game Code</label>
-        <input type="text" placeholder="73FC9" title="Code"></input>
+        <input type="number" placeholder="731921" title="Code"></input>
         <label className={styles.label}>Nickname</label>
         <input type="text" placeholder="Jack's ass" title="Code"></input>
         <Link href={""}>
