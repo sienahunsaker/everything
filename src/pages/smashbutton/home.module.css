@@ -1,0 +1,56 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Titan One", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  height: 100vh;
+}
+
+.main h1 {
+  color: #0094f0;
+}
+
+.info {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+  letter-spacing: normal;
+  flex-direction: column;
+}
+
+.join {
+  background-color: #77c3f2;
+  border: none;
+  font-size: 1.2rem;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 7px;
+  font-family: "Titan One", sans-serif;
+}
+
+.join a {
+  text-decoration: none;
+  color: black;
+}
+.create a {
+  text-decoration: none;
+  color: black;
+}
+.buttonDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.create {
+  background-color: #f2be5c;
+  font-size: 1.2rem;
+  border: none;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 7px;
+  font-family: "Titan One", sans-serif;
+}

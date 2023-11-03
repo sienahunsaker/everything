@@ -1,0 +1,45 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Titan One", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.main h1 {
+  color: #0094f0;
+}
+
+.main h2 {
+  color: black;
+}
+.points {
+  font-size: 1.3rem;
+  color: #0094f0;
+}
+.playerName {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.main a {
+  width: 100%;
+  text-decoration: none;
+}
+.main a button {
+  color: #ffebf4;
+  background-color: #f24130;
+  border: none;
+  font-size: 2.6rem;
+  width: 90%;
+  max-width: 596px;
+  aspect-ratio: 1 / 1;
+  box-shadow: 4px 4px 4px #a70f00;
+  border-radius: 50%;
+  font-family: "Titan One", sans-serif;
+}

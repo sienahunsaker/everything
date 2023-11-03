@@ -1,0 +1,102 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Titan One", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  height: 100vh;
+}
+.buttonDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.buzzdiv {
+  padding: 1rem 0;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: solid 2px #0094f0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.firstBuzz {
+  font-size: 1rem;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 90%;
+}
+
+.clear {
+  background-color: #f2be5c;
+}
+.secondBuzz {
+  font-size: 0.7rem;
+  font-weight: 100;
+  width: 90%;
+  color: gray;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.main h1 {
+  color: #0094f0;
+  margin: 0px;
+}
+.code {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+.label {
+  font-size: 1.2rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.buzz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main input {
+  background-color: transparent;
+  border: solid 1px black;
+  width: 10rem;
+  height: 30px;
+  font-size: large;
+  padding: 1rem;
+}
+.green {
+  background-color: #7fbf50;
+}
+
+.red {
+  background-color: #f24130;
+}
+
+.blue {
+  background-color: #77c3f2;
+}
+.main button a {
+  text-decoration: none;
+  color: black;
+}
+.main button {
+  border: none;
+  font-size: 1.2rem;
+  width: 11rem;
+  height: 3rem;
+  border-radius: 7px;
+  font-family: "Titan One", sans-serif;
+}
